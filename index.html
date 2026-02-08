@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Work+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg
+        class="sun-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="5" />
+        <line x1="12" y1="1" x2="12" y2="3" />
+        <line x1="12" y1="21" x2="12" y2="23" />
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+        <line x1="1" y1="12" x2="3" y2="12" />
+        <line x1="21" y1="12" x2="23" y2="12" />
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+      </svg>
+      <svg
+        class="moon-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+      </svg>
+    </button>
+
+    <div class="container">
+      <header>
+        <img
+          src="https://media.licdn.com/dms/image/v2/D5603AQFCCoSDzP_3ig/profile-displayphoto-scale_400_400/B56Zw8vpn2JMAg-/0/1770545651520?e=1772064000&v=beta&t=afmjgBS3Sza7KgkNJ6-hw4PxIIAUlRAMB5EQOn6-iBQ"
+          alt="Profile Picture"
+          class="profile-image"
+        />
+        <h1>Ashutosh</h1>
+        <p class="job-title">Full-Stack Software Engineer</p>
+        <div class="contact-info">
+          <p class="address">Mathura, Uttar Pradesh, India</p>
+          <div class="contact-links">
+            <!-- <a href="/cdn-cgi/l/email-protection#bcd6ddd2d9fcd9c4ddd1ccd0d992dfd3d1"><span class="__cf_email__" data-cfemail="81ebe0efe4c1e4f9e0ecf1ede4afe2eeec">wwwashutosh@gmail.com</span></a> -->
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=wwwashutosh@gmail.com"
+              target="_blank"
+              class="email-link"
+            >
+              wwwashutosh@gmail.com
+            </a>
+            <!-- <span class="separator">•</span> -->
+            <!-- <a href="tel:+1234567890">+1 (234) 567-890</a> -->
+          </div>
+        </div>
+      </header>
+
+      <section class="about">
+        <h2 class="section-title">About</h2>
+        <p class="about-text">
+          I'm a full-stack developer with hands-on experience in building and
+          deploying modern web applications. Skilled in Next.js, TypeScript,
+          Prisma, PostgreSQL, and Docker-based deployments, with strong version
+          control practices using Git/GitHub.
+        </p>
+      </section>
+
+      <section class="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-item">
+          <h3 class="project-title">Greenchess</h3>
+          <p class="project-description">
+            A real-time 1v1 online chess platform built with Next.js
+            (TypeScript), featuring instant matchmaking, live move
+            synchronization via Pusher, persistent game state with PostgreSQL +
+            Prisma, and fast session handling using Redis.
+          </p>
+          <p class="project-tech">Next-ts, Prisma, PostgreSQL, Redis, Pusher</p>
+          <div class="project-links">
+            <a
+              href="https://github.com/ashutosh017/greenchess"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://greenchess.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+        <div class="project-item">
+          <h3 class="project-title">Splitwise</h3>
+          <p class="project-description">
+            Splitwise in an expense tracking application that simplifies
+            tracking and splitting shared expenses and debts among friends,
+            roommates, or family, making it easy to see who owes whom for things
+            like rent, trips, or meals.
+          </p>
+          <p class="project-tech">Next-ts, Shadcn, Prisma, PostgreSQL, JWT</p>
+          <div class="project-links">
+            <a
+              href="https://github.com/ashutosh017/splitwise_nextjs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://splitwise-nextjs.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <h3 class="project-title">Dopaminly</h3>
+          <p class="project-description">
+            A social platform where users can create profiles, share photos,
+            follow others, interact through likes and comments, and chat
+            one-on-one in real time.
+          </p>
+          <p class="project-tech">
+            Next-ts, Tailwind, Prisma, PostgreSQL, Cloudinary, Pusher
+          </p>
+          <div class="project-links">
+            <a
+              href="https://github.com/ashutosh017/dopaminly"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://dopaminly.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3 class="skill-category-title">Frontend</h3>
+            <ul class="skill-list">
+              <li>Next.js</li>
+              <li>React</li>
+              <li>JavaScript/TypeScript</li>
+              <li>TailwindCSS</li>
+              <li>Websockets</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Backend</h3>
+            <ul class="skill-list">
+              <li>Node.js</li>
+              <li>Bun</li>
+              <li>Express.js</li>
+              <li>Prisma + PostgreSQL</li>
+              <li>JWT Authentication</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3 class="skill-category-title">Tools</h3>
+            <ul class="skill-list">
+              <li>Git/Github</li>
+              <li>VS Code</li>
+              <li>Postman</li>
+              <li>Docker</li>
+              <li>Bash</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="articles">
+        <h2 class="section-title">Articles</h2>
+        <div class="article-item">
+          <div class="article-header">
+            <h3 class="article-title">
+              What problem does connection pooler solves?
+            </h3>
+            <p class="article-meta">January 2026 · 5 min read</p>
+            <p class="article-excerpt">
+              A connection pool is a cache of database connections maintained so
+              that they can be reused when future requests to the database are
+              required. Instead of closing a connection after a query finishes,
+              it is kept alive and placed back into the "pool."
+            </p>
+          </div>
+          <div class="article-content">
+            <p>Problem Statement:</p>
+            <p>
+              Imagine an app with thousands of users. Each time a user triggers
+              a database query, the app opens a new connection. This process
+              isn't free. Each new connection requires a network handshake, SSL
+              negotiation, and authentication. On the database server, this
+              consumes CPU and memory—Postgres, for example, spawns a new
+              process for every connection. At scale, the overhead of creating
+              the connection can take longer than the query itself. If too many
+              users connect at once, the database hits its "connection limit"
+              and starts rejecting requests, causing downtime.
+            </p>
+
+            <p>Solution: Connection Pooling</p>
+
+            <p>
+              A connection pool is a cache of database connections maintained so
+              that they can be reused when future requests to the database are
+              required. Instead of closing a connection after a query finishes,
+              it is kept alive and placed back into the "pool."
+            </p>
+
+            <p>
+              When a new client request comes in: - The app (or a dedicated
+              pooler like PgBouncer) checks the pool for an idle connection. -
+              If one is available, it’s "rented out" to the request immediately.
+              - The query is executed over this existing connection, skipping
+              the expensive handshake. - Once finished, the connection is
+              returned to the pool for the next user.
+            </p>
+
+            <p>
+              The Benefits: - Reduced Latency: No more waiting for handshakes. -
+              Resource Efficiency: Database CPU and RAM stay stable because the
+              number of active processes is capped. - Request Queuing: If the
+              pool is full, new requests wait in a queue for a few milliseconds
+              instead of being immediately rejected.
+            </p>
+          </div>
+        </div>
+
+        <div class="article-item">
+          <div class="article-header">
+            <h3 class="article-title">
+              Why didn’t Rust developers choose to have a garbage collector?
+            </h3>
+            <p class="article-meta">November 2025 · 2 min read</p>
+            <p class="article-excerpt">
+              Because Rust was designed to solve memory safety differently —
+              without sacrificing performance.
+            </p>
+          </div>
+          <div class="article-content">
+            <p>
+              Why didn’t Rust developers choose to have a garbage collector?
+            </p>
+
+            <p>
+              Because Rust was designed to solve memory safety differently —
+              without sacrificing performance.
+            </p>
+
+            <p>
+              Garbage collectors, like those used in Java or Go, automatically
+              clean up memory at runtime. That’s convenient, but it comes with a
+              cost: unpredictable pauses, extra CPU usage, and less control over
+              performance-critical systems.
+            </p>
+
+            <p>
+              Rust takes another path. Instead of a runtime garbage collector,
+              it uses a compile-time ownership system. The compiler tracks who
+              owns what memory and ensures it’s safely freed when no longer
+              needed. No runtime scanning, no pauses — just deterministic,
+              efficient memory management.
+            </p>
+
+            <p>
+              This approach gives Rust C/C++-level performance with strong
+              safety guarantees. It’s memory safety without garbage collection —
+              and that’s what makes Rust stand out in the world of modern
+              systems programming.
+            </p>
+          </div>
+        </div>
+
+        <div class="article-item">
+          <div class="article-header">
+            <h3 class="article-title">A high-level overview of WebRTC.</h3>
+            <p class="article-meta">June 2025 · 10 min read</p>
+            <p class="article-excerpt">
+              WebRTC enables real-time audio, video, and data communication
+              directly between browsers using a peer-to-peer model. It powers
+              applications like video calls, voice calls, and live streaming
+              without requiring plugins or native applications.
+            </p>
+          </div>
+          <div class="article-content">
+            <p>
+              WebRTC enables real-time audio, video, and data communication
+              directly between browsers using a peer-to-peer model. It powers
+              applications like video calls, voice calls, and live streaming
+              without requiring plugins or native applications.
+            </p>
+
+            <p>
+              Even though WebRTC is primarily peer-to-peer, it still relies on
+              servers during the connection setup phase to work reliably across
+              different network conditions.
+            </p>
+
+            <p>
+              A signaling server is used to exchange metadata between peers,
+              such as session descriptions and ICE candidates. WebRTC itself
+              does not define how signaling should be implemented, and the
+              signaling server does not carry media.
+            </p>
+
+            <p>
+              A STUN server helps a peer understand how it appears to the public
+              internet by returning the public IP address and mapped port
+              assigned by the NAT.
+            </p>
+
+            <p>
+              ICE candidates represent possible network endpoints that can be
+              used to establish a connection. These candidates include IP
+              address, port, protocol, and candidate type, and are gathered from
+              local interfaces, STUN servers, and TURN servers.
+            </p>
+
+            <p>
+              A TURN server acts as a fallback when direct peer-to-peer
+              communication is not possible due to restrictive NATs or
+              firewalls. In such cases, media is relayed through the TURN server
+              to ensure connectivity.
+            </p>
+
+            <p>
+              WebRTC uses an offer and answer model for negotiation. One peer
+              initiates the connection by sending an offer, and the other peer
+              responds with an answer that describes how the session should be
+              established.
+            </p>
+
+            <p>
+              Session Description Protocol, or SDP, is a text-based format that
+              describes the multimedia session, including media types, codecs,
+              transport parameters, and ICE candidates.
+            </p>
+
+            <p>
+              RTCPeerConnection is the browser API responsible for managing
+              connection setup, ICE candidate exchange, and media transmission
+              between peers.
+            </p>
+
+            <p>
+              While peer-to-peer works well for small groups, it does not scale
+              efficiently beyond a few participants. To support larger calls,
+              Selective Forwarding Units, or SFUs, are commonly used.
+            </p>
+
+            <p>
+              An SFU receives media streams from each participant and
+              selectively forwards them to others without mixing the media on
+              the server.
+            </p>
+
+            <p>
+              A Multipoint Control Unit, or MCU, takes a different approach by
+              mixing audio and video on the server and sending a single
+              composite stream to each participant.
+            </p>
+
+            <p>
+              For large-scale systems, Distributed SFU architectures are used,
+              where multiple SFUs forward streams between each other to improve
+              scalability and reduce latency.
+            </p>
+
+            <p>
+              Simulcast allows a browser to send multiple video encodings of the
+              same stream at different qualities, enabling better bandwidth
+              usage and adaptive streaming.
+            </p>
+
+            <p>
+              WebRTC combines peer-to-peer efficiency with server-assisted
+              reliability to enable real-time communication across real-world
+              networks.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>&copy; 2025 Ashutosh. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://x.com/ashutosh__018" target="_blank">Twitter</a>
+          <a href="https://www.linkedin.com/in/ashutosh017/" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/ashutosh017/" target="_blank">GitHub</a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=wwwashutosh@gmail.com"
+            target="_blank"
+            >Email</a
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script>
+      // Theme toggle functionality
+      const themeToggle = document.getElementById("themeToggle");
+      const htmlElement = document.documentElement;
+
+      // Check for saved theme preference or default to 'light'
+      const currentTheme = localStorage.getItem("theme") || "dark";
+      htmlElement.setAttribute("data-theme", currentTheme);
+
+      themeToggle.addEventListener("click", () => {
+        const currentTheme = htmlElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "light" ? "dark" : "light";
+
+        htmlElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+      });
+
+      // Article expansion functionality
+      const articleHeaders = document.querySelectorAll(".article-header");
+
+      articleHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const articleItem = header.parentElement;
+          articleItem.classList.toggle("expanded");
+        });
+      });
+    </script>
+  </body>
+</html>
