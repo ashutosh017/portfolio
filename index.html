@@ -54,18 +54,40 @@
           class="profile-image"
         />
         <h1>Ashutosh</h1>
-        <p class="job-title">Software Developer</p>
+        
+        <p class="job-title">
+           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+          Software Developer</p>
         <div class="contact-info">
-          <p class="address">Mathura, India</p>
+          <p class="address">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+            Mathura, India</p>
           <div class="contact-links">
             <!-- <a href="/cdn-cgi/l/email-protection#bcd6ddd2d9fcd9c4ddd1ccd0d992dfd3d1"><span class="__cf_email__" data-cfemail="81ebe0efe4c1e4f9e0ecf1ede4afe2eeec">wwwashutosh@gmail.com</span></a> -->
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=wwwashutos225h@gmail.com"
-              target="_blank"
-              class="email-link"
-            >
-            wwwashutosh225@gmail.com
-            </a>
+              <div class="email-container">
+                        <a               href="https://mail.google.com/mail/?view=cm&fs=1&to=wwwashutos225h@gmail.com" target="_blank" class="email-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            wwwashutosh225@gmail.com
+                        </a>
+                        <button class="copy-email-btn" aria-label="Copy email">
+                            <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                            </svg>
+                            <svg class="check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </button>
+                    </div>
             <!-- <span class="separator">•</span> -->
             <!-- <a href="https://www.linkedin.com/in/ashutosh017/" target="_blank"
             >LinkedIn</a 
@@ -520,32 +542,7 @@
       data-cfasync="false"
       src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
     ></script>
-    <script>
-      // Theme toggle functionality
-      const themeToggle = document.getElementById("themeToggle");
-      const htmlElement = document.documentElement;
-
-      // Check for saved theme preference or default to 'light'
-      const currentTheme = localStorage.getItem("theme") || "dark";
-      htmlElement.setAttribute("data-theme", currentTheme);
-
-      themeToggle.addEventListener("click", () => {
-        const currentTheme = htmlElement.getAttribute("data-theme");
-        const newTheme = currentTheme === "light" ? "dark" : "light";
-
-        htmlElement.setAttribute("data-theme", newTheme);
-        localStorage.setItem("theme", newTheme);
-      });
-
-      // Article expansion functionality
-      const articleHeaders = document.querySelectorAll(".article-header");
-
-      articleHeaders.forEach((header) => {
-        header.addEventListener("click", () => {
-          const articleItem = header.parentElement;
-          articleItem.classList.toggle("expanded");
-        });
-      });
+    <script src="./script.js">
     </script>
   </body>
 </html>
