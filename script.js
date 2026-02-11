@@ -23,11 +23,14 @@
           articleItem.classList.toggle("expanded");
         });
       });
+
+        // View more/less functionality for sections
         const viewMoreBtns = document.querySelectorAll('.view-more-btn');
         
         viewMoreBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const section = btn.getAttribute('data-section');
+                console.log("section: ", section)
                 const container = btn.previousElementSibling;
                 
                 container.classList.toggle('expanded');

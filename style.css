@@ -199,7 +199,20 @@
             display: block;
             stroke: var(--color-accent);
         }
+          .resume-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-text);
+            text-decoration: none;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            padding: 0.5rem 0;
+        }
 
+        .resume-link svg {
+            stroke: var(--color-text);
+        }
         .contact-links .separator {
             color: var(--color-muted);
         }
