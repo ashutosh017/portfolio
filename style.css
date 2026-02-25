@@ -88,8 +88,15 @@
         header {
             text-align: center;
             margin-bottom: 5rem;
+            padding: 2rem 0;
             opacity: 0;
             animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .profile-container {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
         }
 
         .profile-image {
@@ -97,94 +104,104 @@
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 2rem;
-            border: 1px solid var(--color-border);
+            border: 2px solid var(--color-border);
+            padding: 4px;
+            transition: transform 0.3s ease;
             opacity: 0;
             animation: fadeIn 1s ease 0.3s forwards;
         }
 
+        .profile-image:hover {
+            transform: scale(1.02);
+        }
+
         h1 {
             font-family: var(--font-display);
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 300;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.01em;
+            color: var(--color-text);
         }
 
         .job-title {
             color: var(--color-muted);
-            font-size: 0.95rem;
-            letter-spacing: 0.05em;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
             font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-meta {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .job-title svg {
-            stroke: var(--color-muted);
-        }
-
-        .contact-info {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .address {
             color: var(--color-muted);
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        .address svg {
-            stroke: var(--color-muted);
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .email-container {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .contact-links a {
-            color: var(--color-text);
-            text-decoration: none;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
             gap: 0.4rem;
         }
 
-        .contact-links a svg {
-            stroke: var(--color-text);
-            flex-shrink: 0;
+        .header-socials {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
+        }
+
+        .header-socials a {
+            color: var(--color-muted);
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .header-socials a:hover {
+            color: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        .contact-methods {
+            margin-bottom: 2rem;
+        }
+
+        .email-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: var(--color-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--color-border);
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .email-link {
+            color: var(--color-text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
         }
 
         .copy-email-btn {
             background: none;
             border: none;
             cursor: pointer;
-            padding: 0.25rem;
+            padding: 0.2rem;
             display: flex;
             align-items: center;
-            justify-content: center;
             color: var(--color-muted);
+            transition: color 0.2s ease;
         }
 
-        .copy-email-btn svg {
-            stroke: var(--color-muted);
+        .copy-email-btn:hover {
+            color: var(--color-text);
         }
 
         .copy-email-btn .check-icon {
@@ -199,20 +216,43 @@
             display: block;
             stroke: var(--color-accent);
         }
-          .resume-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--color-text);
-            text-decoration: none;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            padding: 0.5rem 0;
+
+        .header-actions {
+            margin-top: 2rem;
         }
 
-        .resume-link svg {
-            stroke: var(--color-text);
+        .resume-button {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--color-text);
+            padding: 0.5rem 1.25rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+            border: 1px solid var(--color-border);
         }
+
+        .resume-button:hover {
+            border-color: var(--color-text);
+            background-color: var(--color-text);
+            color: var(--color-bg);
+        }
+
+        [data-theme="dark"] .resume-button {
+            background-color: transparent;
+            color: var(--color-text);
+            border-color: var(--color-border);
+        }
+
+        [data-theme="dark"] .resume-button:hover {
+            background-color: var(--color-text);
+            color: var(--color-bg);
+            border-color: var(--color-text);
+        }
+
         .contact-links .separator {
             color: var(--color-muted);
         }
@@ -526,24 +566,48 @@
         footer {
             text-align: center;
             margin-top: 5rem;
-            padding-top: 2rem;
+            padding: 4rem 0 2rem;
             border-top: 1px solid var(--color-border);
             color: var(--color-muted);
             font-size: 0.85rem;
         }
 
-        .social-links {
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .copyright {
+            letter-spacing: 0.02em;
+        }
+
+        .footer-content .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
+            gap: 2rem;
             flex-wrap: wrap;
         }
 
-        .social-links a {
+        .footer-content .social-links a {
             color: var(--color-muted);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-content .social-links a:hover {
+            color: var(--color-text);
+        }
+
+        .footer-content .social-links a svg {
+            stroke: currentColor;
+            width: 14px;
+            height: 14px;
         }
 
         @keyframes fadeIn {
