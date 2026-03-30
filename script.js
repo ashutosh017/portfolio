@@ -24,6 +24,16 @@
         });
       });
 
+      const readLessSpans = document.querySelectorAll(".read-less");
+
+      readLessSpans.forEach((span) => {
+        span.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const articleItem = span.closest(".article-item");
+          articleItem.classList.remove("expanded");
+        });
+      });
+
         // View more/less functionality for sections
         const viewMoreBtns = document.querySelectorAll('.view-more-btn');
         

@@ -538,6 +538,37 @@
             font-size: 0.95rem;
         }
 
+        .read-more {
+            color: var(--color-text);
+            opacity: 0.5;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            opacity: 1;
+        }
+
+        .article-item.expanded .read-more {
+            display: none;
+        }
+
+        .read-less {
+            color: var(--color-text);
+            opacity: 0.5;
+            transition: opacity 0.2s ease;
+            cursor: pointer;
+            display: none;
+        }
+
+        .read-less:hover {
+            opacity: 1;
+        }
+
+        .article-item.expanded .read-less {
+            display: inline;
+        }
+
         .article-content {
             max-height: 0;
             overflow: hidden;
