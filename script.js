@@ -3,7 +3,7 @@
       const htmlElement = document.documentElement;
 
       // Check for saved theme preference or default to 'light'
-      const currentTheme = localStorage.getItem("theme") || "dark";
+      const currentTheme = localStorage.getItem("theme") || "light";
       htmlElement.setAttribute("data-theme", currentTheme);
 
       themeToggle.addEventListener("click", () => {
@@ -24,12 +24,11 @@
         });
       });
 
-      const readLessSpans = document.querySelectorAll(".read-less");
+      const articleContents = document.querySelectorAll(".article-content");
 
-      readLessSpans.forEach((span) => {
-        span.addEventListener("click", (e) => {
-          e.stopPropagation();
-          const articleItem = span.closest(".article-item");
+      articleContents.forEach((content) => {
+        content.addEventListener("click", () => {
+          const articleItem = content.parentElement;
           articleItem.classList.remove("expanded");
         });
       });
